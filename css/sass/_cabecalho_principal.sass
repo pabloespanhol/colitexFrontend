@@ -1,0 +1,88 @@
+header
+    min-height: calc(100vh - 94px)
+    background: url(../../img/seringueira.png)
+    background-position: center
+    background-size: cover
+    background-attachment: fixed
+    background-repeat: no-repeat
+    position: relative
+
+.row-bn
+    min-height: calc(100vh - 94px)
+
+.banner h1 
+    border-top: 6px dotted $verde
+    border-bottom: 6px dotted $verde_escuro
+    animation: paraDireita
+    animation-duration: 4s
+    animation-fill-mode: forwards
+
+@keyframes paraDireita
+    0%
+        transform: translateX(-100px)
+        opacity: 0
+    50%
+        transform: translateX(30px)
+    100%
+        transform: translateX(0)
+        opacity: 1
+
+.banner h1 small
+    color: $verde_escuro
+    font-family: $fonte_titulo
+
+.banner h1 strong
+    color: $verde_escuro
+    font-family: $fonte_titulo
+    
+.pedir-btn
+    color: $branco
+    background: $preto
+    font-family: $font-btn
+    font-size: 2rem
+    border: 2px solid $verde_escuro
+    transition: all 0.5s ease-in-out
+    animation: paraEsquerda
+    animation-duration: 4s
+    animation-fill-mode: forwards
+    border-radius: 50px
+
+.pedir-btn:hover
+    color: $branco
+    border: 2px solid $verde_escuro
+    background: $verde
+
+@keyframes paraEsquerda
+    0%
+        transform: translateX(100px)
+        opacity: 0
+    50%
+        transform: translateX(-30px)
+    100%
+        transform: translateX(0)
+        opacity: 1
+
+.btn-adiante
+    display: inline-block
+    position: absolute
+    bottom: 5%
+    left: 50%
+    color: $verde_escuro
+    background: $verde_escuro
+    border-radius: 10px
+    transition: all 0.5 ease
+    animation: paraBaixo
+    animation-duration: 4s
+    animation-iteration-count: infinite
+
+.btn-adiante:hover
+    background: $verde_escuro
+    color: $verde
+
+@keyframes paraBaixo
+    0%
+        transform: translateY(-10px)
+    50%
+        transform: translateY(10px)
+    100%
+        transform: translateY(-10px)
